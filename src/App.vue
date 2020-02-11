@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <router-view></router-view>
+    <div class="teste">
+      <biblioteca :texto="'Igor baiano'"/>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import biblioteca from 'biblioteca';
 
 @Component({
   components: {
-    HelloWorld,
+    biblioteca,
   },
 })
 export default class App extends Vue {}
@@ -25,5 +27,9 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.teste {
+  border: 2px solid black
 }
 </style>

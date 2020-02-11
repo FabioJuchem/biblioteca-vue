@@ -1,17 +1,23 @@
 {
-  "name": "teste",
-  "version": "0.1.0",
-  "private": true,
+  "name": "teste-package-fabio",
+  "version": "0.3.0",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "build-lib": "vue-cli-service build --target lib --name mylib src/main.ts"
   },
   "dependencies": {
+    "biblioteca": "https://github.com/FabioJuchem/bibliotecaGit",
     "core-js": "^3.6.4",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "teste-package-fabio": "^0.3.0",
+    "teste-package-second": "https://github.com/FabioJuchem/outrabiblioteca",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
+    "vue-cli": "^2.9.6",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
@@ -69,9 +75,6 @@
   ],
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest/presets/typescript-and-babel"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
